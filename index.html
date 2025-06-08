@@ -14,29 +14,33 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(120deg, #89f7fe, #66a6ff);
-  min-height: 100vh;
   display: flex;
+  flex-direction: column; /* Ensures vertical stacking */
   align-items: center;
   justify-content: center;
-  color: #333;
-  transition: all 0.3s ease;
+  min-height: 100vh;
+  background: linear-gradient(120deg, #89f7fe, #66a6ff);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 
 /* ===== Container Styling ===== */
 .container {
-  background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column; /* Vertically stack child elements */
+  align-items: center;
+  justify-content: center;
+  gap: 20px; /* Space between elements */
   padding: 30px;
-  border-radius: 20px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
   width: 90%;
   max-width: 500px;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
   text-align: center;
-  animation: fadeIn 0.8s ease-in-out;
-  transition: all 0.3s ease-in-out;
 }
+
 
 @keyframes fadeIn {
   from {
@@ -62,11 +66,9 @@ h2, h3 {
 }
 
 /* ===== Select Dropdown ===== */
-label, select {
-  display: block;
+select, label {
   width: 100%;
-  font-size: 16px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 select {
@@ -124,9 +126,10 @@ button:hover {
 #options-box {
   display: flex;
   flex-direction: column;
-  gap: 14px;
-  margin-bottom: 20px;
+  width: 100%;
+  gap: 12px;
 }
+
 
 #options-box button {
   background-color: #f7f9fc;
